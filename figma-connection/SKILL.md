@@ -41,6 +41,8 @@ If not connected, walk the user through these steps:
 7. Click to run it — a panel appears showing **"MCP ready"**
 8. Keep the panel open while using the MCP server
 
+> **If Claude Code still can't connect after the plugin shows "MCP ready":** take a screenshot of the Figma Desktop Bridge plugin panel and send it to Claude in the chat. This helps diagnose the issue.
+
 ### Subsequent sessions
 1. Open Figma Desktop
 2. Go to **Plugins → Development → Figma Desktop Bridge**

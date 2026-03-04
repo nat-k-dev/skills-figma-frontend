@@ -2,6 +2,7 @@
 name: figma-css-colors
 description: Use this skill when the user asks to extract CSS color styles from a selected Figma item, inspect colors or tokens on a selected node, show token chains, or asks "what colors does this have", "extract css colors", "show me the token chain for colors", or similar Figma color inspection tasks.
 version: 1.0.0
+last_updated: 2026-03-04
 ---
 
 # Figma CSS Color Extraction
