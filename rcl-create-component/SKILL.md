@@ -14,6 +14,17 @@ Implements a complete React component following the project's established patter
 
 ---
 
+## CSS Source Rule (NEVER violate this)
+
+Every CSS class used in implementation must be traceable to one of:
+- `[Figma]` — extracted from Figma (token chain or node inspection)
+- `[ref: filename]` — taken from a reference file (e.g. `src/ui/alert.tsx`)
+- `[reasoning: ...]` — invented for a specific technical reason — must explain why
+
+If the source is unknown or unclear, **ask the user — never guess or fill in gaps.**
+
+---
+
 ## Project Patterns (read these first)
 
 Before implementing, read these reference files to match existing conventions:

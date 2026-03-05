@@ -217,13 +217,11 @@ TYPOGRAPHY:
   Title:       text-lg font-semibold
   Description: text-base font-normal
 
-COLORS:
-  solid/dark:   bg-gray-800   text-white         (no border)
-  solid/gray:   bg-gray-500   text-white         (no border)
-  ...
-  soft/green:   bg-green-100  text-green-800  border-green-200
-  ...
-  white:        bg-white      text-gray-800   border-gray-200
+COLORS (every class must cite its source):
+  solid/dark:   bg-gray-800 [Figma: Colors/Gray/800]   text-white [Figma: Colors/White/100%]    (no border)
+  solid/blue:   bg-sky-600  [Figma: Colors/Sky/600]    text-white [Figma: Colors/White/100%]    (no border)
+  soft/green:   bg-green-100 [Figma: Colors/Green/100]  text-green-800 [Figma]  border-green-200 [Figma]
+  white:        bg-white [Figma]  text-gray-800 [Figma]  border-gray-200 [Figma]
 
 SUB-COMPONENTS:
   Alert        — root div, role="alert", data-slot="alert"
