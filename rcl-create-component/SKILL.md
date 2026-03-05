@@ -287,7 +287,7 @@ data-slot="component-action"
 Re-export everything:
 
 ```ts
-export { Component, componentVariants, type ComponentProps, type ComponentVariant, type ComponentType, type ComponentColor } from './Component';
+export { Component, type ComponentProps, type ComponentVariant, type ComponentType, type ComponentColor } from './Component';
 export { ComponentTitle, type ComponentTitleProps } from './ComponentTitle';
 export { ComponentDescription, type ComponentDescriptionProps } from './ComponentDescription';
 export { ComponentAction, type ComponentActionProps } from './ComponentAction';
@@ -315,6 +315,28 @@ const { type: _t, color: _c, ...restArgs } = args;
 
 ---
 
-## Step 9 — Verify
+## Step 9 — Register in `src/index.ts`
+
+Add exports to the library's main barrel file. Follow the alphabetical/grouped order of existing entries:
+
+```ts
+export {
+  Component,
+  ComponentTitle,
+  ComponentDescription,
+  ComponentAction,
+  type ComponentProps,
+  type ComponentVariant,
+  type ComponentType,
+  type ComponentColor,
+  type ComponentTitleProps,
+  type ComponentDescriptionProps,
+  type ComponentActionProps,
+} from '@/components/ComponentName';
+```
+
+---
+
+## Step 10 — Verify
 
 Run `getDiagnostics` to check for TypeScript errors. Fix any before finishing.

@@ -88,6 +88,25 @@ If a token resolves through an alias with a non-standard name (e.g., `Text/Brand
 
 If the hex value is hardcoded (no token binding), find the closest Tailwind color by hex. Do not silently guess — if unsure about a specific combination, ask.
 
+### ⚠️ Invisible variant detection
+
+After extracting colors for each variant, check for variants that may be **visually invisible on the Figma canvas** (default white background `#ffffff`). Flag them explicitly in the spec output with a warning.
+
+A variant is potentially invisible when ANY of these are true:
+- All fills resolve to `#ffffff` (white) — blends into default Figma canvas
+- All fills have opacity ≤ 15% — too transparent to see
+- Text color matches background color (zero contrast)
+- All strokes and fills are transparent or white
+
+**Example** — `soft/light`: `bg-white/10`, `border-white/10`, `text-white` — all white on white canvas → invisible in Figma, but valid for use on dark backgrounds in code.
+
+When a potentially invisible variant is detected, **stop and ask the user**:
+- Describe what was found (variant name, all-white/transparent colors)
+- Explain it is invisible on the default Figma canvas
+- Ask: "Do you want to keep this variant, remove it, or adjust its colors?"
+
+Do not proceed to the spec output until the user decides.
+
 ### Border handling
 
 - **Solid type**: bg/text only, no visible border → `border-transparent`
